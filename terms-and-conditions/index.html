@@ -8,17 +8,7 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="logo" href="/"><span class="logo-mark">S</span>SplitUdhar</a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/privacy-policy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/delete-account.html">Delete Account</a>
-    </nav>
-  </div>
+<header id="site-header">
 </header>
 
 <main class="page"><div class="container"><article class="content">
@@ -38,23 +28,30 @@
 <h2>6. Availability</h2>
 <p>We may modify, suspend or discontinue features from time to time for maintenance, security, improvements or other operational reasons.</p>
 <h2>7. Account termination</h2>
-<p>You may request account deletion through the <a href="/delete-account.html">Delete Account</a> page. Access may also be suspended or terminated where necessary to protect the service, users or comply with applicable requirements.</p>
+<p>You may request account deletion through the <a href="/delete-account/">Delete Account</a> page. Access may also be suspended or terminated where necessary to protect the service, users or comply with applicable requirements.</p>
 <h2>8. Changes to these terms</h2>
 <p>These terms may be updated from time to time. Continued use after an updated version becomes effective constitutes acceptance of the updated terms to the extent permitted by law.</p>
 <h2>9. Contact</h2>
 <p>For questions about these terms, use the support/contact channel provided inside the SplitUdhar app or the official support address associated with your account.</p>
 </article></div></main>
 
-<footer>
-  <div class="container footer-inner">
-    <div>© 2026 SplitUdhar. All rights reserved.</div>
-    <div>
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/terms.html">Terms & Conditions</a>
-      <a href="/delete-account.html">Delete Account</a>
-      <a href="/about.html">About</a>
-    </div>
-  </div>
+<footer id="site-footer">
 </footer>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('site-footer').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading footer:', error));
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('site-header').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
 </body>
 </html>
