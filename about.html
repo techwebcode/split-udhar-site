@@ -23,7 +23,7 @@
 <h2>Important note</h2>
 <p>SplitUdhar is a record-keeping tool. It does not provide financial, investment, lending or legal advice, and users are responsible for the accuracy of the information they enter.</p>
 <h2>More information</h2>
-<p>For information about how account and app data is handled, see our <a href="/privacy-policy.html">Privacy Policy</a>. For use of the service, see our <a href="/terms.html">Terms & Conditions</a>.</p>
+<p>For information about how account and app data is handled, see our <a href="/privacy-policy/">Privacy Policy</a>. For use of the service, see our <a href="/terms-and-conditions/">Terms & Conditions</a>.</p>
 </article></div></main>
 
 <!-- Your main HTML file -->
@@ -32,14 +32,14 @@
 </footer>
 
 <script>
-  fetch('footer.html')
+  fetch('../footer.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('site-footer').innerHTML = data;
     })
     .catch(error => console.error('Error loading footer:', error));
 
-  fetch('header.html')
+  fetch('../header.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('site-header').innerHTML = data;
