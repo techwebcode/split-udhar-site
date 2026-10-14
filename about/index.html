@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="Learn about SplitUdhar, our mission to simplify shared expenses, informal lending tracking, and eliminate awkward money talks among friends.">
+  <title>About Us | SplitUdhar</title>
+  
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/app-icon-144.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- Header Navigation -->
+<header class="site-header" id="site-header">
+  <div class="container nav-wrap">
+    <a class="brand-logo" href="/" aria-label="SplitUdhar Home">
+      <img src="/assets/logo.png" alt="SplitUdhar Logo" class="logo-img" width="40" height="40">
+      <span>SplitUdhar</span>
+      <span class="logo-badge">App</span>
+    </a>
+    
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="/">Home</a>
+      <a href="/#features">Features</a>
+      <a href="/about/" class="active">About</a>
+      <a href="/privacy-policy/">Privacy</a>
+      <a href="/terms-and-conditions/">Terms</a>
+      <a href="/delete-account/">Delete Account</a>
+    </nav>
+    
+    <div class="nav-actions">
+      <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="nav-btn-download">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+        </svg>
+        <span>Get the App</span>
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <div class="mobile-menu" id="mobile-nav-menu">
+    <a href="/" onclick="toggleMobileNav()">Home</a>
+    <a href="/#features" onclick="toggleMobileNav()">Features</a>
+    <a href="/about/" onclick="toggleMobileNav()">About SplitUdhar</a>
+    <a href="/privacy-policy/" onclick="toggleMobileNav()">Privacy Policy</a>
+    <a href="/terms-and-conditions/" onclick="toggleMobileNav()">Terms & Conditions</a>
+    <a href="/delete-account/" onclick="toggleMobileNav()">Delete Account</a>
+    <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">
+      ⚡ Download on Google Play Store &rarr;
+    </a>
+  </div>
+</header>
+
+<main class="page-wrapper">
+  <div class="container">
+    <article class="legal-article">
+      <div class="article-header">
+        <div class="pill-badge" style="margin-bottom:12px;">Our Mission</div>
+        <h1>About SplitUdhar</h1>
+        <div class="article-meta">
+          <span>A smarter, simpler way to track shared expenses and informal lending.</span>
+        </div>
+      </div>
+      
+      <div class="article-body">
+        <h2>What is SplitUdhar?</h2>
+        <p>
+          <strong>SplitUdhar</strong> is a mobile-first personal finance utility designed to solve the two most common ways friends, flatmates, and colleagues exchange money: <strong>1-on-1 personal lending/borrowing ("Udhar")</strong> and <strong>multi-person group expense splitting</strong>.
+        </p>
+
+        <h2>The Business Problem We Solved</h2>
+        <p>
+          When analyzing everyday personal finance tools, we identified a major gap in the market:
+        </p>
+        <ul>
+          <li><strong>Traditional Group Splitters (e.g. Splitwise):</strong> Excel at multi-person dining and trips, but are awkward and over-engineered when you simply lend ₹1,000 cash to a friend for an emergency or cover a colleague's chai tab.</li>
+          <li><strong>Merchant Credit Books (e.g. Khatabook):</strong> Geared towards small shops and retail businesses, carrying complicated business accounting overhead that doesn't fit friendly relationships.</li>
+        </ul>
+        <p>
+          <strong>SplitUdhar unites both workflows into a single, intuitive interface.</strong> Whether you're tracking informal personal loans with "You Gave" (Lent) and "You Got" (Received) buttons, or dividing vacation costs among 6 friends, SplitUdhar automatically unifies them into <em>one single net balance per person</em>.
+        </p>
+
+        <h2>The Two Core Pillars</h2>
+        <ul>
+          <li><strong>Pillar 1: 1-on-1 Personal Udhar Ledger:</strong> Directly log money you lent or borrowed with any contact in under 3 seconds. View an individual ledger of every transaction, partial payment, and settle up with complete clarity.</li>
+          <li><strong>Pillar 2: Group Expense Splitting:</strong> Create collaborative groups for roommates, road trips, weekend parties, or office lunches. Split bills equally, by custom amounts, or shares, backed by an automated debt simplification engine.</li>
+          <li><strong>The Smart Netting Engine:</strong> If you lent Rahul ₹1,000 personally, and he later paid for a group dinner where your share was ₹400, SplitUdhar automatically calculates that Rahul owes you ₹600. Zero redundant payments.</li>
+        </ul>
+
+        <h2>Our Product Principles</h2>
+        <ul>
+          <li><strong>Zero Clutter, Zero Math Headaches:</strong> Log an expense in 3 seconds, let the app calculate the net position, and eliminate awkward money follow-ups with mutual transparency.</li>
+          <li><strong>Privacy & Security by Default:</strong> Device biometric lock (fingerprint/face recognition), encrypted cloud synchronization (TLS/HTTPS), and zero sale of personal data to third parties.</li>
+          <li><strong>Fairness & Transparency:</strong> Real-time balance calculations ensure both parties always have exact visibility into who owes whom.</li>
+        </ul>
+
+        <h2>About the Developer</h2>
+        <p>
+          SplitUdhar is designed and maintained by <strong>TechWebCode</strong>, a digital product studio dedicated to crafting practical, user-friendly utilities that solve everyday challenges.
+        </p>
+
+        <div class="support-card" style="margin-top:35px;">
+          <div class="support-info">
+            <h4>Ready to try SplitUdhar?</h4>
+            <p>Download the free Android app now on Google Play and start organizing your shared expenses.</p>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="playstore-badge" style="padding:8px 16px;">
+            <svg class="playstore-icon" viewBox="0 0 24 24" fill="currentColor" style="width:22px; height:22px;">
+              <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+            </svg>
+            <div class="playstore-text">
+              <span class="playstore-sub" style="font-size:9px;">GET IT ON</span>
+              <span class="playstore-title" style="font-size:13px;">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer" id="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand-logo" href="/" style="color:#ffffff;">
+          <img src="/assets/logo.png" alt="SplitUdhar" class="logo-img" width="36" height="36">
+          <span>SplitUdhar</span>
+        </a>
+        <p>The effortless personal expense & debt tracker. Split shared bills, monitor who owes whom, and keep your balances organized with total confidence.</p>
+        <div style="margin-top: 15px;">
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="playstore-badge" style="padding: 8px 14px;">
+            <svg class="playstore-icon" viewBox="0 0 24 24" fill="currentColor" style="width:22px; height:22px;">
+              <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+            </svg>
+            <div class="playstore-text">
+              <span class="playstore-sub" style="font-size:9px;">GET IT ON</span>
+              <span class="playstore-title" style="font-size:13px;">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/#features">Features</a>
+          <a href="/about/">About Us</a>
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer">Get Android App</a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Trust & Legal</h4>
+        <div class="footer-links">
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms-and-conditions/">Terms & Conditions</a>
+          <a href="/delete-account/">Delete Account</a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Support & Developer</h4>
+        <div class="footer-links">
+          <a href="mailto:support@techwebcode.in">support@techwebcode.in</a>
+          <span style="font-size:13px; color:#64748b;">Developed by TechWebCode</span>
+          <span style="font-size:13px; color:#64748b;">Package: com.techwebcode.splitudhar</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>© 2026 SplitUdhar by TechWebCode. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/delete-account/">Account Deletion</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>

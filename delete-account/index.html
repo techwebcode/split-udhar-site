@@ -1,55 +1,287 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#4f46e5">
-<title>Delete Account | SplitUdhar</title>
-<link rel="stylesheet" href="/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="Request deletion of your SplitUdhar account and associated data. Step-by-step instructions for in-app deletion and web-based deletion requests.">
+  <title>Delete Account & Data | SplitUdhar</title>
+  
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/app-icon-144.png">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<header id="site-header">
+
+<!-- Header Navigation -->
+<header class="site-header" id="site-header">
+  <div class="container nav-wrap">
+    <a class="brand-logo" href="/" aria-label="SplitUdhar Home">
+      <img src="/assets/logo.png" alt="SplitUdhar Logo" class="logo-img" width="40" height="40">
+      <span>SplitUdhar</span>
+      <span class="logo-badge">App</span>
+    </a>
+    
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="/">Home</a>
+      <a href="/#features">Features</a>
+      <a href="/about/">About</a>
+      <a href="/privacy-policy/">Privacy</a>
+      <a href="/terms-and-conditions/">Terms</a>
+      <a href="/delete-account/" class="active">Delete Account</a>
+    </nav>
+    
+    <div class="nav-actions">
+      <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="nav-btn-download">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+        </svg>
+        <span>Get the App</span>
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <div class="mobile-menu" id="mobile-nav-menu">
+    <a href="/" onclick="toggleMobileNav()">Home</a>
+    <a href="/#features" onclick="toggleMobileNav()">Features</a>
+    <a href="/about/" onclick="toggleMobileNav()">About SplitUdhar</a>
+    <a href="/privacy-policy/" onclick="toggleMobileNav()">Privacy Policy</a>
+    <a href="/terms-and-conditions/" onclick="toggleMobileNav()">Terms & Conditions</a>
+    <a href="/delete-account/" onclick="toggleMobileNav()">Delete Account</a>
+    <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">
+      ⚡ Download on Google Play Store &rarr;
+    </a>
+  </div>
 </header>
 
-<main class="page"><div class="container"><article class="content">
-<h1>Delete Your SplitUdhar Account</h1>
-<p class="meta">Account deletion request</p>
-<p>If you no longer want to use SplitUdhar, you can request deletion of your account and associated data.</p>
-<h2>Before requesting deletion</h2>
-<p>Account deletion may permanently remove your profile and app records associated with the account. Make sure you have saved anything you may need before submitting a request.</p>
-<h2>How to request deletion</h2>
-<ol>
-<li>Open the SplitUdhar app and sign in to your account.</li>
-<li>Open the account/profile settings.</li>
-<li>Select the account deletion option and follow the confirmation steps.</li>
-</ol>
-<p>If the in-app deletion option is unavailable, use the support/contact channel provided by the app and include the account information needed to identify your account. Do not send passwords or authentication codes.</p>
-<h2>What happens after deletion?</h2>
-<p>We will process the deletion request according to the service's data-retention requirements. Some information may need to be retained where required by law, for security, fraud prevention, dispute resolution, or other legitimate operational purposes.</p>
-<h2>Need help?</h2>
-<p>See our <a href="/privacy-policy/">Privacy Policy</a> for more information about data handling.</p>
-</article></div></main>
+<main class="page-wrapper">
+  <div class="container">
+    <article class="legal-article">
+      <div class="article-header">
+        <div class="pill-badge" style="margin-bottom:12px; background:#fef2f2; color:#ef4444; border-color:#fee2e2;">
+          Data Control & User Rights
+        </div>
+        <h1>Delete Your SplitUdhar Account & Data</h1>
+        <div class="article-meta">
+          <span><strong>Google Play Compliance:</strong> Account & Data Deletion Portal</span>
+          <span>•</span>
+          <span><strong>Support:</strong> support@techwebcode.in</span>
+        </div>
+      </div>
+      
+      <div class="article-body">
+        <p>
+          At <strong>SplitUdhar</strong>, we respect your right to control your personal data. If you decide that you no longer wish to use the service, you can permanently delete your SplitUdhar account and all associated personal and financial data.
+        </p>
 
-# footer
-<!-- Your main HTML file -->
-<footer id="site-footer">
-  <!-- footer.html content will load here automatically -->
+        <div class="callout-box danger">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <strong>Permanent Action Warning</strong>
+            Deleting your account is permanent and irreversible. Once deleted, your login credentials, personal profile, individual expense records, group entries, and balance history cannot be recovered.
+          </div>
+        </div>
+
+        <h2>Method 1: Direct In-App Deletion (Instant & Recommended)</h2>
+        <p>If you currently have the SplitUdhar app installed on your Android device:</p>
+        <ol>
+          <li>Open the <strong>SplitUdhar</strong> app and sign in to your account.</li>
+          <li>Tap the <strong>Profile</strong> tab in the bottom navigation bar.</li>
+          <li>Scroll down to the <strong>Account & Security</strong> section.</li>
+          <li>Tap on <strong>Delete Account Permanently</strong>.</li>
+          <li>Read the confirmation prompt and tap <strong>Delete Permanently</strong> to confirm.</li>
+        </ol>
+        <p>
+          Your account session is terminated immediately and your account deletion is processed right away.
+        </p>
+
+        <h2>Method 2: Web-Based Deletion Request (Without App)</h2>
+        <p>
+          If you have uninstalled the app or cannot access your mobile device, you can request account deletion using our web portal below or by sending an email directly to <a href="mailto:support@techwebcode.in">support@techwebcode.in</a>.
+        </p>
+
+        <!-- Interactive Deletion Form -->
+        <div class="delete-form-card" id="deletion-form-container">
+          <h3 style="margin-top:0;">Submit Online Account Deletion Request</h3>
+          <p style="font-size:14px; color:var(--text-muted); margin-bottom:20px;">
+            Please provide the email address or phone number associated with your SplitUdhar account. Our support team will verify your identity and delete your account within 48 to 72 hours.
+          </p>
+
+          <form id="account-deletion-form" onsubmit="handleDeletionSubmit(event)">
+            <div class="form-group">
+              <label class="form-label" for="user-email">Registered Email Address or Phone *</label>
+              <input type="text" id="user-email" class="form-input" placeholder="e.g. name@example.com or +91 9876543210" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="deletion-reason">Reason for deletion (Optional)</label>
+              <select id="deletion-reason" class="form-select">
+                <option value="No longer need the app">No longer need the app</option>
+                <option value="Switching to another device">Switching to another device</option>
+                <option value="Privacy concerns">Privacy concerns</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-checkbox-label">
+                <input type="checkbox" id="confirm-deletion" required>
+                <span>I understand that this action is permanent and will permanently delete all my transactions, group memberships, and balance records.</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="background:#dc2626; border-color:#dc2626; width:100%;" id="submit-delete-btn">
+              Submit Deletion Request
+            </button>
+          </form>
+
+          <div id="deletion-success-msg" style="display:none; margin-top:20px;" class="callout-box success">
+            <div class="callout-icon">✓</div>
+            <div class="callout-content">
+              <strong>Request Generated</strong>
+              We have pre-filled a deletion request email to <code>support@techwebcode.in</code>. Please click below to send it from your registered email so our team can immediately verify and purge your account.
+              <div style="margin-top:12px;">
+                <a id="mailto-direct-btn" href="#" class="btn btn-primary" style="padding:8px 16px; font-size:13.5px;">
+                  Open Email Client & Send
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>3. What Data Is Deleted?</h2>
+        <p>When your deletion request is processed, the following categories of data are permanently deleted from our servers:</p>
+        <ul>
+          <li><strong>User Profile:</strong> Your full name, registered email address, authentication ID, and profile picture.</li>
+          <li><strong>Financial & Transaction Records:</strong> All personal lending and borrowing ("Udhar") records created under your account.</li>
+          <li><strong>Group Expenses & Ledgers:</strong> Any expense allocations, notes, and individual split records tied to your profile.</li>
+          <li><strong>Device & Notification Data:</strong> Push notification tokens (Firebase Cloud Messaging tokens) and active session credentials.</li>
+        </ul>
+
+        <h2>4. What Data May Be Retained & Retention Period</h2>
+        <ul>
+          <li><strong>Shared Group History:</strong> If you participated in a shared group with other users, those other users will see that an expense occurred for audit continuity, but your personal identifiers will be disassociated and anonymized.</li>
+          <li><strong>Backup Purge Window:</strong> Data removed from active databases is completely cleared from encrypted routine database backups within <strong>30 days</strong>.</li>
+          <li><strong>Legal & Fraud Prevention:</strong> In rare cases, limited technical logs or transactional audit records may be retained only if strictly required by applicable Indian legal statutes or regulatory directives.</li>
+        </ul>
+
+        <h2>5. Need Additional Assistance?</h2>
+        <p>
+          If you have any questions or require confirmation of your account deletion, our support team is available to assist:
+        </p>
+        
+        <div class="support-card">
+          <div class="support-info">
+            <h4>SplitUdhar Customer Support</h4>
+            <p><strong>Email:</strong> <a href="mailto:support@techwebcode.in">support@techwebcode.in</a></p>
+            <p><strong>Response Time:</strong> Typically within 24–48 hours on business days</p>
+            <p><strong>App:</strong> com.techwebcode.splitudhar</p>
+          </div>
+          <a href="mailto:support@techwebcode.in?subject=SplitUdhar%20Account%20Deletion%20Request" class="btn btn-secondary">
+            Email Support Directly
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer" id="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand-logo" href="/" style="color:#ffffff;">
+          <img src="/assets/logo.png" alt="SplitUdhar" class="logo-img" width="36" height="36">
+          <span>SplitUdhar</span>
+        </a>
+        <p>The effortless personal expense & debt tracker. Split shared bills, monitor who owes whom, and keep your balances organized with total confidence.</p>
+        <div style="margin-top: 15px;">
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="playstore-badge" style="padding: 8px 14px;">
+            <svg class="playstore-icon" viewBox="0 0 24 24" fill="currentColor" style="width:22px; height:22px;">
+              <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+            </svg>
+            <div class="playstore-text">
+              <span class="playstore-sub" style="font-size:9px;">GET IT ON</span>
+              <span class="playstore-title" style="font-size:13px;">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/#features">Features</a>
+          <a href="/about/">About Us</a>
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer">Get Android App</a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Trust & Legal</h4>
+        <div class="footer-links">
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms-and-conditions/">Terms & Conditions</a>
+          <a href="/delete-account/">Delete Account</a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Support & Developer</h4>
+        <div class="footer-links">
+          <a href="mailto:support@techwebcode.in">support@techwebcode.in</a>
+          <span style="font-size:13px; color:#64748b;">Developed by TechWebCode</span>
+          <span style="font-size:13px; color:#64748b;">Package: com.techwebcode.splitudhar</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>© 2026 SplitUdhar by TechWebCode. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/delete-account/">Account Deletion</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
+<script src="/assets/site.js"></script>
 <script>
-  fetch('../footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('site-footer').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading footer:', error));
-
-    fetch('../header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('site-header').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading header:', error));
+  function handleDeletionSubmit(e) {
+    e.preventDefault();
+    const email = document.getElementById('user-email').value.trim();
+    const reason = document.getElementById('deletion-reason').value;
+    
+    const subject = encodeURIComponent("SplitUdhar Account Deletion Request - " + email);
+    const body = encodeURIComponent(
+      "Hello SplitUdhar Support Team,\n\n" +
+      "I would like to request the permanent deletion of my SplitUdhar account and all associated personal and transaction data.\n\n" +
+      "Account Email / Phone: " + email + "\n" +
+      "Reason for Deletion: " + reason + "\n\n" +
+      "I confirm that I want my account and records purged permanently.\n\n" +
+      "Thank you."
+    );
+    
+    const mailtoUrl = "mailto:support@techwebcode.in?subject=" + subject + "&body=" + body;
+    
+    document.getElementById('mailto-direct-btn').href = mailtoUrl;
+    document.getElementById('deletion-success-msg').style.display = 'flex';
+    
+    // Attempt opening email client
+    window.location.href = mailtoUrl;
+  }
 </script>
 </body>
 </html>

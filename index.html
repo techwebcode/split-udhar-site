@@ -1,93 +1,641 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#4f46e5">
-<title>Home | SplitUdhar</title>
-<link rel="stylesheet" href="/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="SplitUdhar helps you track shared expenses, record personal lending and borrowing, and manage group bills with friends without messy spreadsheets.">
+  <title>SplitUdhar - Simple Expense Splitting & Udhar Tracking App</title>
+  
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/app-icon-144.png">
+  <link rel="stylesheet" href="/styles.css">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://splitudhar.techwebcode.in/">
+  <meta property="og:title" content="SplitUdhar - Expense Splitting & Money Tracker">
+  <meta property="og:description" content="Split shared bills, track who owes whom, and keep personal lending and borrowing organized.">
+  <meta property="og:image" content="/assets/app-icon-144.png">
 </head>
 <body>
-<header id="site-header">
 
-</header>
-<main>
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="badge">Simple money & expense tracking</span>
-      <h1>Keep track of who owes whom.</h1>
-      <p class="lead">SplitUdhar helps you record shared expenses, track balances and keep your personal lending and borrowing organized — without complicated spreadsheets.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#features">Explore SplitUdhar</a>
-        <a class="btn btn-secondary" href="/about.html">Learn more</a>
-      </div>
+<!-- Header Navigation -->
+<header class="site-header" id="site-header">
+  <div class="container nav-wrap">
+    <a class="brand-logo" href="/" aria-label="SplitUdhar Home">
+      <img src="/assets/logo.png" alt="SplitUdhar Logo" class="logo-img" width="40" height="40">
+      <span>SplitUdhar</span>
+      <span class="logo-badge">App</span>
+    </a>
+    
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="/" class="active">Home</a>
+      <a href="#features">Features</a>
+      <a href="/about/">About</a>
+      <a href="/privacy-policy/">Privacy</a>
+      <a href="/terms-and-conditions/">Terms</a>
+      <a href="/delete-account/">Delete Account</a>
+    </nav>
+    
+    <div class="nav-actions">
+      <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="nav-btn-download">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+        </svg>
+        <span>Get the App</span>
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
     </div>
-    <div class="mockup">
-      <div class="phone">
-        <div class="screen">
-          <small>Current balance</small>
-          <div class="balance">
-            <strong>₹2,450</strong>
-            <span>You should receive</span>
+  </div>
+  
+  <div class="mobile-menu" id="mobile-nav-menu">
+    <a href="/" onclick="toggleMobileNav()">Home</a>
+    <a href="#features" onclick="toggleMobileNav()">Features</a>
+    <a href="/about/" onclick="toggleMobileNav()">About SplitUdhar</a>
+    <a href="/privacy-policy/" onclick="toggleMobileNav()">Privacy Policy</a>
+    <a href="/terms-and-conditions/" onclick="toggleMobileNav()">Terms & Conditions</a>
+    <a href="/delete-account/" onclick="toggleMobileNav()">Delete Account</a>
+    <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">
+      ⚡ Download on Google Play Store &rarr;
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="pill-badge">
+          <span class="dot"></span>
+          <span>2-in-1 Companion: 1-on-1 Borrow & Lent + Group Expense Splitting</span>
+        </div>
+        
+        <h1>Track what you <span class="gradient-text">Lent, Borrowed</span> & what you Split.</h1>
+        
+        <p class="lead">
+          SplitUdhar is the complete personal money manager. Track 1-on-1 personal loans and informal dues ("Maine Diya / Maine Liya") alongside complex group bills with flatmates and travel friends — with zero awkwardness and instant net calculations.
+        </p>
+        
+        <div class="hero-cta-group">
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="playstore-badge" id="hero-playstore-btn">
+            <svg class="playstore-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+            </svg>
+            <div class="playstore-text">
+              <span class="playstore-sub">GET IT ON</span>
+              <span class="playstore-title">Google Play</span>
+            </div>
+          </a>
+          
+          <a class="btn btn-secondary" href="#dual-engine">Explore Dual Modes</a>
+        </div>
+        
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>1-on-1 Udhar & Lending</span>
           </div>
-          <div class="item"><span>Rahul</span><strong>+₹1,200</strong></div>
-          <div class="item"><span>Amit</span><strong>+₹850</strong></div>
-          <div class="item"><span>Neha</span><strong>+₹400</strong></div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Group Bill Splitting</span>
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Unified Net Balance</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Realistic Interactive Phone Preview -->
+      <div class="hero-preview">
+        <div class="mockup-backdrop"></div>
+        <div class="phone-wrapper">
+          <div class="phone-screen">
+            <div class="phone-notch">
+              <div class="phone-speaker"></div>
+            </div>
+            
+            <div class="app-screen-body">
+              <div class="app-header-bar">
+                <div class="app-user-greeting">
+                  <div class="avatar-circle">RS</div>
+                  <div>
+                    <h4>Hi, Rajat</h4>
+                    <span>Dashboard</span>
+                  </div>
+                </div>
+                <div style="font-size:18px;">🔔</div>
+              </div>
+              
+              <!-- Net Total Balance Card (Matching App's NetBalanceCard) -->
+              <div class="balance-card-summary">
+                <div class="balance-header">
+                  <span>Net Total Balance</span>
+                  <span class="net-badge">To Receive</span>
+                </div>
+                <div class="net-amount">+₹1,850</div>
+                <div class="net-subtitle">Overall, to receive from friends ₹1,850</div>
+              </div>
+              
+              <!-- App's Summary Row (To Receive & To Pay) -->
+              <div class="mock-summary-row">
+                <div class="mock-summary-card">
+                  <div class="mock-summary-icon icon-receive">↓</div>
+                  <div class="mock-summary-info">
+                    <span class="mock-summary-label">To Receive</span>
+                    <span class="mock-summary-val-receive">+₹2,450</span>
+                  </div>
+                </div>
+                <div class="mock-summary-card">
+                  <div class="mock-summary-icon icon-owe">↑</div>
+                  <div class="mock-summary-info">
+                    <span class="mock-summary-label">To Pay</span>
+                    <span class="mock-summary-val-owe">-₹600</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Friends Section Header & Search -->
+              <div class="mock-section-head">
+                <span class="mock-section-title">Friends</span>
+                <span class="mock-section-count">4 contacts</span>
+              </div>
+              
+              <div class="mock-search-row">
+                <div class="mock-search-box">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  <span>Search contact by name...</span>
+                </div>
+                <div class="mock-sort-btn">
+                  <span>⇅</span>
+                </div>
+              </div>
+              
+              <!-- Friends Contact List (Matching Flutter App Avatar & Colors) -->
+              <div class="mockup-item-list">
+                <div class="mock-txn-item">
+                  <div class="mock-txn-left">
+                    <div class="mock-avatar av-blue">RS</div>
+                    <div class="mock-txn-info">
+                      <span class="mock-txn-name">Rahul Sharma</span>
+                      <span class="mock-txn-meta">Goa Trip Villa</span>
+                    </div>
+                  </div>
+                  <span class="mock-txn-amount amount-receive">+₹1,200</span>
+                </div>
+                
+                <div class="mock-txn-item">
+                  <div class="mock-txn-left">
+                    <div class="mock-avatar av-teal">AK</div>
+                    <div class="mock-txn-info">
+                      <span class="mock-txn-name">Amit Kumar</span>
+                      <span class="mock-txn-meta">Dinner at Social</span>
+                    </div>
+                  </div>
+                  <span class="mock-txn-amount amount-receive">+₹850</span>
+                </div>
+                
+                <div class="mock-txn-item">
+                  <div class="mock-txn-left">
+                    <div class="mock-avatar av-purple">NS</div>
+                    <div class="mock-txn-info">
+                      <span class="mock-txn-name">Neha Singh</span>
+                      <span class="mock-txn-meta">Flat WiFi Bill</span>
+                    </div>
+                  </div>
+                  <span class="mock-txn-amount amount-owe">-₹600</span>
+                </div>
+                
+                <div class="mock-txn-item">
+                  <div class="mock-txn-left">
+                    <div class="mock-avatar av-orange">PK</div>
+                    <div class="mock-txn-info">
+                      <span class="mock-txn-name">Priya Kapoor</span>
+                      <span class="mock-txn-meta">Movie Tickets</span>
+                    </div>
+                  </div>
+                  <span class="mock-txn-amount amount-receive">+₹400</span>
+                </div>
+              </div>
+              
+              <!-- App Bottom Navigation & Floating Action Button -->
+              <div class="mock-phone-bottom">
+                <div class="mock-fab">+</div>
+                <div class="mock-nav-item active">
+                  <span style="font-size:13px;">🏠</span>
+                  <span>Home</span>
+                </div>
+                <div class="mock-nav-item">
+                  <span style="font-size:13px;">👥</span>
+                  <span>Groups</span>
+                </div>
+                <div class="mock-nav-item">
+                  <span style="font-size:13px;">📒</span>
+                  <span>History</span>
+                </div>
+                <div class="mock-nav-item">
+                  <span style="font-size:13px;">👤</span>
+                  <span>Profile</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
+  <!-- Dual-Engine Showcase Section -->
+  <section id="dual-engine" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="pill-badge" style="background:#eff6ff; color:#2563eb; border-color:#dbeafe; margin-bottom:12px;">
+          The Dual-Engine Advantage
+        </div>
+        <h2>Not Just an Expense Splitter.<br>Two Powerful Modes in One App.</h2>
+        <p>Most apps only split group bills or force you into complicated business bookkeeping. SplitUdhar is architected for the two ways you actually share money in daily life.</p>
+      </div>
+      
+      <div class="dual-engine-grid">
+        <!-- Engine 1: 1-on-1 Personal Udhar (Lend & Borrow) -->
+        <div class="engine-card engine-udhar">
+          <div class="engine-badge badge-udhar">
+            <span>🤝 Mode 1: 1-on-1 Personal Udhar</span>
+          </div>
+          <h3>Personal Lending & Borrowing</h3>
+          <p class="engine-lead">
+            Record informal peer loans, borrowed money, or payments made for a friend ("Maine Diya / Maine Liya") without creating an unwanted group.
+          </p>
+          
+          <div class="engine-feature-list">
+            <div class="engine-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Instant "You Gave" & "You Got" logging:</strong> Add cash loans, emergency peer advances, or chai/coffee tabs in 3 seconds.</span>
+            </div>
+            <div class="engine-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Private running friend ledger:</strong> A dedicated statement for each friend showing dates, notes, and partial repayments.</span>
+            </div>
+            <div class="engine-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>No awkward reminders:</strong> Keep a clear, mutual record that removes memory lapses and eliminates awkward follow-up chats.</span>
+            </div>
+          </div>
+          
+          <div class="engine-preview-box">
+            <div style="font-size:11.5px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase;">In-App 1-on-1 Action Buttons</div>
+            <div class="udhar-pills-row">
+              <div class="udhar-pill pill-gave">
+                <span>↑ You Gave ₹ (Lent)</span>
+              </div>
+              <div class="udhar-pill pill-got">
+                <span>↓ You Got ₹ (Received)</span>
+              </div>
+            </div>
+            <div style="font-size:12.5px; color:#475467; display:flex; justify-content:space-between;">
+              <span>Rahul Sharma (Balance)</span>
+              <strong style="color:#16a34a;">You are owed ₹1,200</strong>
+            </div>
+          </div>
+        </div>
 
-<section id="features" class="section alt">
-  <div class="container">
-    <div class="center">
-      <h2>Everything you need to stay organized</h2>
-      <p class="lead" style="margin:0 auto;">Built for everyday expenses, informal lending and shared payments.</p>
-    </div>
-    <div class="features">
-      <div class="card"><div class="icon">💰</div><h3>Track balances</h3><p>See what you owe and what others owe you in one simple view.</p></div>
-      <div class="card"><div class="icon">👥</div><h3>Split expenses</h3><p>Record shared expenses and keep individual balances clear.</p></div>
-      <div class="card"><div class="icon">📒</div><h3>Keep a history</h3><p>Maintain a useful record of your transactions and settlements.</p></div>
-      <div class="card"><div class="icon">🔔</div><h3>Stay on top</h3><p>Use reminders and transaction information to reduce forgotten dues.</p></div>
-      <div class="card"><div class="icon">🔒</div><h3>Privacy focused</h3><p>Your account and transaction information should remain accessible only to you and the services needed to operate the app.</p></div>
-      <div class="card"><div class="icon">✨</div><h3>Simple by design</h3><p>No complicated accounting workflow — just the information you need.</p></div>
-    </div>
-  </div>
-</section>
+        <!-- Engine 2: Multi-Person Group Expense Splitting -->
+        <div class="engine-card engine-groups">
+          <div class="engine-badge badge-groups">
+            <span>👥 Mode 2: Group Expense Splitting</span>
+          </div>
+          <h3>Smart Group Bill Splitting</h3>
+          <p class="engine-lead">
+            Manage shared expenses for apartment flatmates, road trips, weekend parties, and office colleague lunches where multiple people pay.
+          </p>
+          
+          <div class="engine-feature-list">
+            <div class="engine-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Flexible split calculations:</strong> Split bills equally, by custom percentage, or by exact custom amounts among members.</span>
+            </div>
+            <div class="engine-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Debt simplification engine:</strong> Eliminates circular IOUs so friends settle up with the absolute minimum number of transfers.</span>
+            </div>
+            <div class="engine-feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Multi-payer support:</strong> Anyone in the group can pay for any expense, and everyone's balance updates automatically.</span>
+            </div>
+          </div>
+          
+          <div class="engine-preview-box">
+            <div style="font-size:11.5px; font-weight:700; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase;">Group Allocation Preview</div>
+            <div class="group-split-preview" style="margin-bottom:8px;">
+              <span>🏖️ Goa Trip Villa (₹12,000)</span>
+              <span style="color:#2563eb; font-size:11.5px;">Split by 4</span>
+            </div>
+            <div style="font-size:12.5px; color:#475467; display:flex; justify-content:space-between;">
+              <span>Your Share: ₹3,000</span>
+              <strong style="color:#16a34a;">Rahul paid for all</strong>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<section class="section">
-  <div class="container center">
-    <h2>Need help or information?</h2>
-    <p class="lead" style="margin:0 auto 24px;">Read our policies, learn about SplitUdhar, or request account deletion.</p>
-    <div class="actions" style="justify-content:center;">
-      <a class="btn btn-secondary" href="/privacy-policy/">Privacy Policy</a>
-      <a class="btn btn-secondary" href="/terms-and-conditions/">Terms & Conditions</a>
-      <a class="btn btn-secondary" href="/delete-account/">Delete Account</a>
+      <!-- Smart Netting Banner -->
+      <div class="smart-netting-banner">
+        <div class="netting-text">
+          <div style="font-size:11px; text-transform:uppercase; letter-spacing:1px; color:#93c5fd; font-weight:700; margin-bottom:4px;">The Magic Formula</div>
+          <h4>Smart Netting: 1-on-1 Udhar & Groups Connected</h4>
+          <p>
+            Other apps isolate group bills from personal lending. SplitUdhar combines both into <strong>one unified net balance per friend</strong>. If you lent Rahul ₹1,000 cash, and he paid ₹800 for your group dinner (your share ₹400), SplitUdhar automatically calculates: <strong>Rahul owes you ₹600</strong>.
+          </p>
+        </div>
+        
+        <div class="netting-formula-card">
+          <div class="formula-row">
+            <span>1-on-1 Cash Loan to Rahul</span>
+            <span style="color:#86efac; font-weight:700;">+₹1,000</span>
+          </div>
+          <div class="formula-row">
+            <span>Your Share in Group Dinner</span>
+            <span style="color:#fca5a5; font-weight:700;">-₹400</span>
+          </div>
+          <div class="formula-row formula-result">
+            <span>Final Unified Settlement</span>
+            <span>Rahul owes you ₹600</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Everyday Real-World Scenarios Grid -->
+      <div class="use-cases-grid">
+        <div class="use-case-card">
+          <div class="use-case-icon">🏠</div>
+          <h4>Flatmates & Rent</h4>
+          <p>Monthly rent, maid & cook wages, groceries, WiFi, and electricity bills neatly split with housemates.</p>
+        </div>
+        <div class="use-case-card">
+          <div class="use-case-icon">🚗</div>
+          <h4>Road Trips & Vacations</h4>
+          <p>Hotels, fuel, toll booths, and adventure activities tracked across your entire travel gang.</p>
+        </div>
+        <div class="use-case-card">
+          <div class="use-case-icon">☕</div>
+          <h4>Daily Coffee & Lunch</h4>
+          <p>Chai tabs, Friday team lunches, and quick UPI payments covered when someone forgets their wallet.</p>
+        </div>
+        <div class="use-case-card">
+          <div class="use-case-icon">💸</div>
+          <h4>Informal Cash Loans</h4>
+          <p>Personal lending to friends, siblings, or cousins with clear repayment history and zero stress.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+  
+  <!-- Core Features Section -->
+  <section id="features" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Built for everyday expenses, informal lending & groups</h2>
+        <p>From flatmates sharing utility bills to weekend road trips and quick informal loans among friends.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">💰</div>
+          <h3>1-on-1 Udhar Tracker</h3>
+          <p>Easily log personal loans, borrowed money, and informal dues with any friend so no one forgets.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon-box">👥</div>
+          <h3>Smart Group Splitting</h3>
+          <p>Organize expenses for flatmates, trips, office colleagues, and parties with flexible split options.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon-box">📊</div>
+          <h3>Who Owes Whom</h3>
+          <p>Instant clarity on your net position. See exact breakdown of who owes you and whom you need to pay.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon-box">⚡</div>
+          <h3>1-Tap Settle Up</h3>
+          <p>Record settlements with a single tap. Balances update immediately with full transaction confirmation.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon-box">🔒</div>
+          <h3>Biometric & Privacy First</h3>
+          <p>Protect your financial records with device fingerprint/Face unlock. Your data stays strictly yours.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon-box">☁️</div>
+          <h3>Cloud Sync & History</h3>
+          <p>Your records are backed up securely to the cloud. Access your account across devices without losing data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- How It Works Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>How SplitUdhar Works</h2>
+        <p>Three straightforward steps to hassle-free expense management.</p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Select Friend or Group</h3>
+          <p>Pick a friend from your contacts or create a dedicated group for a trip, household, or dinner.</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Add the Expense</h3>
+          <p>Enter the bill amount, choose who paid, and select how it should be split among participants.</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Track & Settle Anytime</h3>
+          <p>SplitUdhar calculates the exact balances automatically. Settle up in full or partial payments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Direct Play Store Download Call To Action -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-grid">
+          <div class="cta-text">
+            <h2>Start splitting expenses smarter today</h2>
+            <p>Download SplitUdhar for Android from Google Play. Keep your group expenses clear, fair, and stress-free.</p>
+            <div class="cta-buttons">
+              <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="playstore-badge" id="banner-playstore-btn">
+                <svg class="playstore-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+                </svg>
+                <div class="playstore-text">
+                  <span class="playstore-sub">GET IT ON</span>
+                  <span class="playstore-title">Google Play</span>
+                </div>
+              </a>
+              <a class="btn btn-secondary" href="/about/">Learn About Us</a>
+            </div>
+          </div>
+          
+          <div class="cta-visual">
+            <div class="app-rating-card">
+              <div class="rating-stars">★★★★★</div>
+              <div class="rating-score">Clean & Simple</div>
+              <div class="rating-caption">Designed to eliminate awkward money conversations with friends and flatmates.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find quick answers about SplitUdhar features, privacy, and account management.</p>
+      </div>
+      
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Is SplitUdhar free to use?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes, SplitUdhar is free to download and use for managing personal debts, informal loans, and group expenses.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does SplitUdhar process bank transfers or UPI payments directly?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            SplitUdhar is a personal record-keeping and expense management utility. It helps you track who paid and who owes money. It does not handle banking transactions, credit lending, or hold funds.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is my financial and personal data secure?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. All communication with our servers is encrypted using industry-standard TLS/HTTPS protocols. We do not sell your personal data to any third parties. You can also enable local biometric authentication (fingerprint/PIN) inside the app.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I delete my SplitUdhar account and data?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            You can delete your account at any time directly inside the app (under Profile &rarr; Delete Account Permanently) or request deletion via our web-based <a href="/delete-account/">Account Deletion page</a>. All your personal data and transaction records will be permanently removed.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
-<!-- Your main HTML file -->
-<footer id="site-footer">
+<!-- Footer -->
+<footer class="site-footer" id="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand-logo" href="/" style="color:#ffffff;">
+          <img src="/assets/logo.png" alt="SplitUdhar" class="logo-img" width="36" height="36">
+          <span>SplitUdhar</span>
+        </a>
+        <p>The effortless personal expense & debt tracker. Split shared bills, monitor who owes whom, and keep your balances organized with total confidence.</p>
+        <div style="margin-top: 15px;">
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="playstore-badge" style="padding: 8px 14px;">
+            <svg class="playstore-icon" viewBox="0 0 24 24" fill="currentColor" style="width:22px; height:22px;">
+              <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+            </svg>
+            <div class="playstore-text">
+              <span class="playstore-sub" style="font-size:9px;">GET IT ON</span>
+              <span class="playstore-title" style="font-size:13px;">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="#features">Features</a>
+          <a href="/about/">About Us</a>
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer">Get Android App</a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Trust & Legal</h4>
+        <div class="footer-links">
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms-and-conditions/">Terms & Conditions</a>
+          <a href="/delete-account/">Delete Account</a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Support & Developer</h4>
+        <div class="footer-links">
+          <a href="mailto:support@techwebcode.in">support@techwebcode.in</a>
+          <span style="font-size:13px; color:#64748b;">Developed by TechWebCode</span>
+          <span style="font-size:13px; color:#64748b;">Package: com.techwebcode.splitudhar</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>© 2026 SplitUdhar by TechWebCode. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/delete-account/">Account Deletion</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('site-footer').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading footer:', error));
-
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('site-header').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading header:', error));
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

@@ -1,57 +1,255 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#4f46e5">
-<title>Terms & Conditions | SplitUdhar</title>
-<link rel="stylesheet" href="/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="Terms and Conditions for SplitUdhar application and website. Understand the rules, user responsibilities, and guidelines for using our expense splitting service.">
+  <title>Terms & Conditions | SplitUdhar</title>
+  
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/app-icon-144.png">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<header id="site-header">
+
+<!-- Header Navigation -->
+<header class="site-header" id="site-header">
+  <div class="container nav-wrap">
+    <a class="brand-logo" href="/" aria-label="SplitUdhar Home">
+      <img src="/assets/logo.png" alt="SplitUdhar Logo" class="logo-img" width="40" height="40">
+      <span>SplitUdhar</span>
+      <span class="logo-badge">App</span>
+    </a>
+    
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="/">Home</a>
+      <a href="/#features">Features</a>
+      <a href="/about/">About</a>
+      <a href="/privacy-policy/">Privacy</a>
+      <a href="/terms-and-conditions/" class="active">Terms</a>
+      <a href="/delete-account/">Delete Account</a>
+    </nav>
+    
+    <div class="nav-actions">
+      <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="nav-btn-download">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+        </svg>
+        <span>Get the App</span>
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <div class="mobile-menu" id="mobile-nav-menu">
+    <a href="/" onclick="toggleMobileNav()">Home</a>
+    <a href="/#features" onclick="toggleMobileNav()">Features</a>
+    <a href="/about/" onclick="toggleMobileNav()">About SplitUdhar</a>
+    <a href="/privacy-policy/" onclick="toggleMobileNav()">Privacy Policy</a>
+    <a href="/terms-and-conditions/" onclick="toggleMobileNav()">Terms & Conditions</a>
+    <a href="/delete-account/" onclick="toggleMobileNav()">Delete Account</a>
+    <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">
+      ⚡ Download on Google Play Store &rarr;
+    </a>
+  </div>
 </header>
 
-<main class="page"><div class="container"><article class="content">
-<h1>Terms & Conditions</h1>
-<p class="meta">Last updated: October 5, 2026</p>
-<div class="notice">These terms are a general product-use draft. They should be reviewed and adapted to your actual business entity, jurisdiction, support process and app functionality before production publication.</div>
-<h2>1. Acceptance</h2>
-<p>By using SplitUdhar, you agree to these Terms & Conditions. If you do not agree, please do not use the service.</p>
-<h2>2. Use of the service</h2>
-<p>You may use SplitUdhar for lawful personal expense and payment record keeping. You are responsible for maintaining the accuracy of information you enter and for keeping your account credentials secure.</p>
-<h2>3. User responsibility</h2>
-<p>SplitUdhar records information provided by users. You are responsible for verifying balances, transactions, identities and payment status before relying on them.</p>
-<h2>4. No financial advice</h2>
-<p>SplitUdhar is a record-keeping application and does not provide financial, investment, credit, lending or legal advice.</p>
-<h2>5. Prohibited use</h2>
-<p>You must not use the service for unlawful activity, fraud, abuse, unauthorized access, interference with the service, or attempts to compromise the security or privacy of other users.</p>
-<h2>6. Availability</h2>
-<p>We may modify, suspend or discontinue features from time to time for maintenance, security, improvements or other operational reasons.</p>
-<h2>7. Account termination</h2>
-<p>You may request account deletion through the <a href="/delete-account/">Delete Account</a> page. Access may also be suspended or terminated where necessary to protect the service, users or comply with applicable requirements.</p>
-<h2>8. Changes to these terms</h2>
-<p>These terms may be updated from time to time. Continued use after an updated version becomes effective constitutes acceptance of the updated terms to the extent permitted by law.</p>
-<h2>9. Contact</h2>
-<p>For questions about these terms, use the support/contact channel provided inside the SplitUdhar app or the official support address associated with your account.</p>
-</article></div></main>
+<main class="page-wrapper">
+  <div class="container">
+    <article class="legal-article">
+      <div class="article-header">
+        <div class="pill-badge" style="margin-bottom:12px;">User Agreement</div>
+        <h1>Terms & Conditions</h1>
+        <div class="article-meta">
+          <span><strong>Effective Date:</strong> October 2026</span>
+          <span>•</span>
+          <span><strong>Application:</strong> SplitUdhar (Android App: com.techwebcode.splitudhar)</span>
+          <span>•</span>
+          <span><strong>Developer:</strong> TechWebCode</span>
+        </div>
+      </div>
+      
+      <div class="article-body">
+        <p>
+          Welcome to <strong>SplitUdhar</strong>. These Terms & Conditions ("Terms", "Agreement") constitute a legally binding agreement between you ("User", "you", or "your") and <strong>TechWebCode</strong> ("we", "us", or "our"), governing your access to and use of the SplitUdhar mobile application, website (<a href="https://splitudhar.techwebcode.in">splitudhar.techwebcode.in</a>), and associated cloud services.
+        </p>
 
-<footer id="site-footer">
+        <div class="callout-box">
+          <div class="callout-icon">📌</div>
+          <div class="callout-content">
+            <strong>Important Notice</strong>
+            By downloading, installing, creating an account, or using SplitUdhar, you confirm that you have read, understood, and agreed to be bound by these Terms and our <a href="/privacy-policy/">Privacy Policy</a>. If you do not agree, please do not use the service.
+          </div>
+        </div>
+
+        <h2>1. Scope of the Service & Non-Financial Disclaimer</h2>
+        <p>
+          <strong>SplitUdhar is an expense tracking, allocation, and informal debt ("Udhar") record-keeping utility.</strong> It is designed to help individuals, flatmates, friends, and travel groups log shared expenses, keep track of who owes whom, and calculate balance summaries.
+        </p>
+        
+        <div class="callout-box danger">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <strong>Not a Financial, Banking, or Lending Institution</strong>
+            SplitUdhar is NOT a bank, Non-Banking Financial Company (NBFC), money transmitter, digital wallet provider, or payment gateway. SplitUdhar does not process, hold, deposit, or transmit fiat currency, nor does it provide loan underwriting, credit assessment, or debt recovery services. Any monetary settlements between users take place entirely outside of SplitUdhar (e.g., via cash, UPI, or third-party bank transfers).
+          </div>
+        </div>
+
+        <h2>2. Eligibility & Account Registration</h2>
+        <ul>
+          <li><strong>Age Requirement:</strong> You must be at least 13 years old (or the legal age of majority in your jurisdiction) to use SplitUdhar.</li>
+          <li><strong>Account Accuracy:</strong> When registering via Google Sign-In or email, you agree to provide authentic information and keep your account details current.</li>
+          <li><strong>Credential Security:</strong> You are responsible for maintaining the confidentiality of your device, account session, and PIN/biometric authentication. You agree to notify us immediately of any unauthorized use of your account.</li>
+        </ul>
+
+        <h2>3. User Responsibilities & Conduct</h2>
+        <p>When using SplitUdhar, you agree that:</p>
+        <ul>
+          <li><strong>Accuracy of Entries:</strong> You are solely responsible for verifying the accuracy of transaction amounts, dates, participant allocations, and settlement entries that you record.</li>
+          <li><strong>Mutual Peer Consent:</strong> You will only record legitimate informal debts, shared bills, or shared expenses that have been mutually agreed upon with your peers.</li>
+          <li><strong>Lawful Use:</strong> You will not use SplitUdhar for any unlawful purpose, fraud, extortion, harassment, money laundering, or commercial money lending without appropriate regulatory licensing.</li>
+          <li><strong>System Integrity:</strong> You will not attempt to reverse engineer, decompile, disrupt, or bypass the security features of the SplitUdhar mobile app, API, or hosting infrastructure.</li>
+        </ul>
+
+        <h2>4. Data Synchronization & Service Availability</h2>
+        <p>
+          SplitUdhar provides cloud synchronization across your devices. While we endeavor to ensure high uptime and continuous data availability:
+        </p>
+        <ul>
+          <li>We do not warrant that the service will be entirely uninterrupted, error-free, or free of temporary downtime caused by server maintenance, network outages, or updates.</li>
+          <li>We strongly recommend that you maintain independent records of critical shared payments.</li>
+        </ul>
+
+        <h2>5. Intellectual Property Rights</h2>
+        <p>
+          All right, title, and interest in and to SplitUdhar — including but not limited to the user interface, software code, branding, logos, graphics, icons, visual designs, and algorithms — are and shall remain the exclusive property of TechWebCode. You are granted a limited, personal, non-transferable, revocable license to use the app for personal, non-commercial purposes.
+        </p>
+
+        <h2>6. Third-Party Services & Advertisements</h2>
+        <p>
+          SplitUdhar may integrate third-party services (such as Google Sign-In, Firebase, and Google Mobile Ads). Your interactions with third-party providers are governed by their respective terms of service and privacy policies. TechWebCode is not responsible for the availability, accuracy, or content of third-party platforms.
+        </p>
+
+        <h2>7. Account Termination & Deletion</h2>
+        <p>
+          <strong>Your Right to Terminate:</strong> You may stop using the app and delete your account at any time. You can execute immediate deletion through <code>Profile &rarr; Account Settings &rarr; Delete Account Permanently</code> or submit a request via our <a href="/delete-account/">Account Deletion Page</a>.
+        </p>
+        <p>
+          <strong>Our Right to Terminate:</strong> We reserve the right to suspend, terminate, or restrict your account access if you violate these Terms, engage in abusive or fraudulent behavior, or where required by law.
+        </p>
+
+        <h2>8. Disclaimer of Warranties</h2>
+        <p>
+          TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SPLITUDHAR AND ALL ASSOCIATED SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. TECHWEBCODE DOES NOT GUARANTEE THAT THE SERVICE WILL MEET YOUR SPECIFIC REQUIREMENTS OR THAT CALCULATIONS WILL BE COMPLETELY ERROR-FREE IN ALL OPERATING CONDITIONS.
+        </p>
+
+        <h2>9. Limitation of Liability</h2>
+        <p>
+          TO THE EXTENT PERMITTED BY APPLICABLE LAW, TECHWEBCODE, ITS OFFICERS, EMPLOYEES, AND PARTNERS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, REPUTATIONAL HARM, FINANCIAL DISPUTES BETWEEN USERS, OR EXPENSE MISCALCULATIONS RESULTING FROM USER INPUT ERRORS OR TEMPORARY SERVICE OUTAGES.
+        </p>
+
+        <h2>10. Governing Law & Jurisdiction</h2>
+        <p>
+          These Terms and any dispute arising out of or related to them shall be governed by and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law principles. The courts located in India shall have exclusive jurisdiction over any claims or disputes.
+        </p>
+
+        <h2>11. Modifications to Terms</h2>
+        <p>
+          We reserve the right to update or modify these Terms at any time. When modifications occur, the updated Terms will be published on this page with an updated "Effective Date". Your continued use of SplitUdhar following the posting of changes constitutes your acceptance of the revised Terms.
+        </p>
+
+        <h2>12. Contact Information</h2>
+        <p>
+          For any questions, legal notices, or feedback regarding these Terms & Conditions, please contact us at:
+        </p>
+        
+        <div class="support-card">
+          <div class="support-info">
+            <h4>SplitUdhar Legal Desk</h4>
+            <p><strong>Developer:</strong> TechWebCode</p>
+            <p><strong>Email:</strong> <a href="mailto:support@techwebcode.in">support@techwebcode.in</a></p>
+            <p><strong>Website:</strong> <a href="https://splitudhar.techwebcode.in">https://splitudhar.techwebcode.in</a></p>
+          </div>
+          <a href="mailto:support@techwebcode.in?subject=Terms%20Inquiry%20-%20SplitUdhar" class="btn btn-primary">
+            Contact Support
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer" id="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand-logo" href="/" style="color:#ffffff;">
+          <img src="/assets/logo.png" alt="SplitUdhar" class="logo-img" width="36" height="36">
+          <span>SplitUdhar</span>
+        </a>
+        <p>The effortless personal expense & debt tracker. Split shared bills, monitor who owes whom, and keep your balances organized with total confidence.</p>
+        <div style="margin-top: 15px;">
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="playstore-badge" style="padding: 8px 14px;">
+            <svg class="playstore-icon" viewBox="0 0 24 24" fill="currentColor" style="width:22px; height:22px;">
+              <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+            </svg>
+            <div class="playstore-text">
+              <span class="playstore-sub" style="font-size:9px;">GET IT ON</span>
+              <span class="playstore-title" style="font-size:13px;">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/#features">Features</a>
+          <a href="/about/">About Us</a>
+          <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer">Get Android App</a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Trust & Legal</h4>
+        <div class="footer-links">
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms-and-conditions/">Terms & Conditions</a>
+          <a href="/delete-account/">Delete Account</a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Support & Developer</h4>
+        <div class="footer-links">
+          <a href="mailto:support@techwebcode.in">support@techwebcode.in</a>
+          <span style="font-size:13px; color:#64748b;">Developed by TechWebCode</span>
+          <span style="font-size:13px; color:#64748b;">Package: com.techwebcode.splitudhar</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>© 2026 SplitUdhar by TechWebCode. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/delete-account/">Account Deletion</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<script>
-  fetch('../footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('site-footer').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading footer:', error));
-  fetch('../header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('site-header').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading header:', error));
-</script>
-
+<script src="/assets/site.js"></script>
 </body>
 </html>

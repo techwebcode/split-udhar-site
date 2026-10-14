@@ -1,12 +1,47 @@
-<header>
-  <div class="container nav">
-    <a class="logo" href="/"><span class="logo-mark">S</span>SplitUdhar</a>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/privacy-policy/">Privacy</a>
-      <a href="/terms-and-conditions/">Terms</a>
-      <a href="/delete-account/">Delete Account</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand-logo" href="/" aria-label="SplitUdhar Home">
+      <img src="/assets/logo.png" alt="SplitUdhar Logo" class="logo-img" width="40" height="40">
+      <span>SplitUdhar</span>
+      <span class="logo-badge">App</span>
+    </a>
+    
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="/" id="nav-home">Home</a>
+      <a href="/#features" id="nav-features">Features</a>
+      <a href="/about/" id="nav-about">About</a>
+      <a href="/privacy-policy/" id="nav-privacy">Privacy</a>
+      <a href="/terms-and-conditions/" id="nav-terms">Terms</a>
+      <a href="/delete-account/" id="nav-delete">Delete Account</a>
     </nav>
+    
+    <div class="nav-actions">
+      <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" class="nav-btn-download">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.323-.61-.8-.61-1.34V3.154c0-.54.24-1.017.61-1.34zm11.248 11.25l2.253 2.253-12.012 6.84 9.759-9.093zm0-2.128L5.098 1.843l12.012 6.84-2.253 2.253zm1.414 1.064l3.197 1.821c.91.518.91 1.365 0 1.883l-3.197 1.821-2.062-2.062 2.062-2.063z"/>
+        </svg>
+        <span>Get the App</span>
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation menu" onclick="toggleMobileNav()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <div class="mobile-menu" id="mobile-nav-menu">
+    <a href="/" onclick="toggleMobileNav()">Home</a>
+    <a href="/#features" onclick="toggleMobileNav()">Features</a>
+    <a href="/about/" onclick="toggleMobileNav()">About SplitUdhar</a>
+    <a href="/privacy-policy/" onclick="toggleMobileNav()">Privacy Policy</a>
+    <a href="/terms-and-conditions/" onclick="toggleMobileNav()">Terms & Conditions</a>
+    <a href="/delete-account/" onclick="toggleMobileNav()">Delete Account</a>
+    <a href="https://play.google.com/store/apps/details?id=com.techwebcode.splitudhar" target="_blank" rel="noopener noreferrer" style="color:var(--primary); font-weight:700;">
+      ⚡ Download on Google Play Store &rarr;
+    </a>
   </div>
 </header>
