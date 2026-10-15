@@ -1,0 +1,6 @@
+# robots.txt for SplitUdhar (https://splitudhar.techwebcode.in/)
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://splitudhar.techwebcode.in/sitemap.xml
